@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h5>{{question}}</h5>
+<form method = "GET" action = "/delete_task">
+	<input type="hidden" name="data" value="{{data}}">
+	<input type="radio" name="task_del" value="Да">Да
+	<input type="radio" name="task_del" value="Нет">Нет<br>
+	<input type="submit" value="Отправить">
+</form>
+{% endblock %}

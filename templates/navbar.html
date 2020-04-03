@@ -24,7 +24,10 @@
         <a class="nav-link" href="/logout">Выйти</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="/submit_action">Удалить мой аккаунт</a>
+		<form method = "GET" action = "/submit_action">
+			<input type="hidden" name="action" value="delete_myself">
+			<input type="submit" value="Удалить мой аккаунт">
+		</form>
       </li>
     </ul>
   </div>

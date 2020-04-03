@@ -3,8 +3,8 @@
 
 <h5>{{question}}</h5>
 <form method = "GET" action = "/delete_myself">
-	<input type="radio" name="friend_del" value="Да">Да
-	<input type="radio" name="friend_del" value="Нет">Нет<br>
+	<input type="hidden" name="iwannadie" value='yes'>
+	<input type = "text" name = "password"/>
 	<input type="submit" value="Отправить">
 </form>
 {% endblock %}
