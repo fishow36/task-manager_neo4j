@@ -8,7 +8,14 @@
 
 <h5>Друзья:</h5>
 {% for u in usernames%}
-    <p><a href="http://127.0.0.1:5000/{{u}}">{{u}}</a></p>
+    <p>
+	<form method="GET" action="/submit_action">
+	<a href="http://127.0.0.1:5000/{{u}}">{{u}}</a>
+	<input type="hidden" name="friendname" value="{{u}}">
+	<input type="hidden" name="action" value="delete_friend">
+	<input type="submit" value="Удалить">
+	</form>
+	</p>
 {% endfor %}
 
 <h5>Заявки в друзья:</h5>

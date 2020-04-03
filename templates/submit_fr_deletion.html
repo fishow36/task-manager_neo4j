@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h5>{{question}}</h5>
+<form method = "GET" action = "/delete_friend">
+	<input type="hidden" name="friendname" value="{{friendname}}">
+	<input type="radio" name="friend_del" value="Да">Да
+	<input type="radio" name="friend_del" value="Нет">Нет<br>
+	<input type="submit" value="Отправить">
+</form>
+{% endblock %}
