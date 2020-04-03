@@ -18,6 +18,18 @@
 	 		<option value="{{j}}">{{j}} 
 	 	{% endfor %}
 	 </select></p>
+	
+	<p>Дедлайн:	
+	<input type = "date" name = "deadline" /></p>
+	
+	<p> Предложить другу делать вместе
+	<select name="friend">
+	 	{% for i in friends %}
+	 		<option value="{{i}}">{{i}} 
+	 	{% endfor %}
+	 </select></p>
+	</p>
+	
 	<p><input type="submit" value="Отправить"></p>
 </form>
 {% endblock %}

@@ -7,12 +7,14 @@
      <th>Задачи</th>
      <th>Важность</th>
      <th>Статус выполнения</th>
+	 <th>Дедлайн</th>
     </tr>
  {%for t in data%}
     <tr>
  <td>{{t[0]}}</td> 
  <td>{{t[1]}}</td> 
  <td>{{t[2]}}</td> 
+ <td>{{t[3]}}</td> 
      </tr>
  {% endfor %}
   </table>
