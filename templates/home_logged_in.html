@@ -3,10 +3,11 @@
 <br>
 <h4>{{username}}</h4>
 <form method="POST" action="">
-	<table width = "30%">
+	<table width = "50%">
 		<tr>
 			<th> Важность </th>
 			<th> Статус </th>
+			<th><input type="checkbox" name="deadline" value="sort"> Отсортировать по дедлайну </th>
 		</tr>
 		<tr>
 			<td><input type="checkbox" name="importance1" value="не очень важно"> Не очень важно</td>
@@ -33,6 +34,7 @@
     <th>Важность</th>
 	<th>Статус выполнения</th>
 	<th>Дедлайн</th>
+	<th>Группа</th>
 	<th> </th>
    </tr>
 {%for t in data%}
@@ -41,6 +43,7 @@
 <td>{{t[1]}}</td> 
 <td>{{t[2]}}</td> 
 <td>{{t[3]}}</td> 
+<td>{{t[4]}}</td> 
 <td>
 	<form method = "GET" action = "/submit_action">
 		<input type="hidden" name="data" value="{{t}}">
