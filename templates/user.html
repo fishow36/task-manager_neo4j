@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <h5>{{username}}</h5>
+{% if friend_str != 'empty'%}
 <h6>{{friend_str}}</h6>
+{%endif%}
+{%if friend_str != 'Вы дружите с этим пользователем.' %}
+<h6>{{handshakes_str}}</h6>
+<form method="GET" action="/send_request">
+    <p><input type = "hidden" value = {{username}} name = "username"/></p>
+    <p><input type="submit" value="Добавить в друзья"></p>
+</form>
+{% endif %}
+
 <table class = "table1" width="70%" cellpadding="5">
     <tr>
      <th>Задачи</th>
