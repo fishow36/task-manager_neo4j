@@ -16,9 +16,14 @@
 	 		<option value="{{j}}">{{j}} 
 	 	{% endfor %}
 	 </select></p>
-	<p><input type="submit" value="Сохранить"></p>
 
 	<p>Группа:
-		<input type = "text" name= "group" /></p>
+		<select name="group">
+	 	{% for g in groups %}
+	 		<option value="{{g}}">{{g}} 
+	 	{% endfor %}
+	 </select></p>
+	 
+	 <p><input type="submit" value="Сохранить"></p>
 </form>
 {% endblock %}

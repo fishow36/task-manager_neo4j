@@ -2,7 +2,7 @@
 {% block content %}
 <h5>Задачи от друзей:</h5>
 {% for t in t_requests%}
-    <p>Пользователь {{t[4]}} предложил(а) вам задачу {{t[0]}}</p>
+    <p>Пользователь {{t[4]}} предложил(а) вам задачу "{{t[0]}}"</p>
     <form method = "GET" action = "/reply_to_friends_tasks">
         <input type="hidden" name="nickname" value="{{t[4]}}">
 		<input type="hidden" name="task_name" value="{{t[0]}}">

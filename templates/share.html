@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action="">	
+	<p>Предложить другу делать задание "{{task}}" вместе
+	<select name="friend">
+	 	{% for i in friends %}
+	 		<option value="{{i}}">{{i}} 
+	 	{% endfor %}
+	 </select></p>
+	 
+	<p><input type="submit" value="Отправить"></p>
+</form>
+{% endblock %}
